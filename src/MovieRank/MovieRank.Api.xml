@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MovieRank.Api</name>
+    </assembly>
+    <members>
+        <member name="T:MovieRank.Api.Controllers.MovieController">
+            <summary>
+            Movie ranking rest entrypoint
+            </summary>
+        </member>
+        <member name="M:MovieRank.Api.Controllers.MovieController.#ctor(MovieRank.Domains.Interfaces.IMovieRankService)">
+            <summary>
+            Movie ranking constructor
+            </summary>
+            <param name="movieRankService">Movie rank service</param>
+        </member>
+        <member name="M:MovieRank.Api.Controllers.MovieController.GetAllItems">
+            <summary>
+            Get all movies rank in dynamo database
+            </summary>
+            <returns>Movie rank data</returns>
+        </member>
+        <member name="M:MovieRank.Api.Controllers.MovieController.GetMovieByName(System.Int32,System.String)">
+            <summary>
+            Get movie ranking by partition and sort key
+            </summary>
+            <param name="userId">Partition key</param>
+            <param name="movieName">Sort key</param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieRank.Api.Controllers.MovieController.GetUsersRankedMovieByName(System.Int32,System.String)">
+            <summary>
+            Get all movies ranking that begin with specifc name by partition and sort key
+            </summary>
+            <param name="userId">Partition key</param>
+            <param name="movieName">Sort key</param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieRank.Api.Controllers.MovieController.AddMovie(System.Int32,MovieRank.Domains.DTO.Request.MovieCreateRequest)">
+            <summary>
+            Add movie rank
+            </summary>
+            <param name="userId">Partition key</param>
+            <param name="movie">Movie rank object</param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieRank.Api.Controllers.MovieController.UpdateMovie(System.Int32,MovieRank.Domains.DTO.Request.MovieUpdateRequest)">
+            <summary>
+            Update movie rank
+            </summary>
+            <param name="userId">Partition key</param>
+            <param name="movie">Movie rank object</param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieRank.Api.Controllers.MovieController.GetMovieRankig(System.String)">
+            <summary>
+            Get ranking by movie rank name
+            </summary>
+            <param name="movieName">MovieName-index - Index</param>
+            <returns></returns>
+        </member>
+        <member name="T:MovieRank.Api.Middleware.ExceptionHandler">
+            <summary>
+            Global handler exeptions in application
+            </summary>
+        </member>
+    </members>
+</doc>
